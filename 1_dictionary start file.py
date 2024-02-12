@@ -93,7 +93,7 @@ print()
 
 
 
-'''
+
 
 
 print()
@@ -107,23 +107,32 @@ for key in phonebook:
 for value in phonebook.values():
     print(value)
 
+for key, value in phonebook.items():
+    print(f'The key is {key} and the value is {value}')
+
+for item_tuple in phonebook.items():
+    print(item_tuple)
+
+
+
 
 print()
 print('*****  end section 5 ********')
 print()
 
 
-'''
+
 
 
 print()
 print('*****  start section 6 - using get and clear ********')
 print()
 
+phone = phonebook.get('chris', '555-5555')
+print(phone)
 
-
-
-
+phonebook.clear() #clears out all data
+print(phonebook)
 
 print()
 print('*****  end section 6 ********')
@@ -135,7 +144,10 @@ print()
 print('*****  start section 7 - using pop method ********')
 print()
 
-
+print(phonebook)
+remove = phonebook.pop('Chris', 'not found')
+print(remove)
+print(phonebook)
 
 
 
@@ -150,8 +162,10 @@ print()
 print('*****  start section 8 - using popitem ********')
 print()
 
-
-
+print(phonebook)
+a = phonebook.popitem() #removes the last item in the dictionary
+print(a)
+print(phonebook)
 
 
 
@@ -159,13 +173,22 @@ print()
 print('*****  end section 8 ********')
 print()
 
-
+'''
 
 print()
 print('*****  start section 9 - using random and converting to list ********')
 print()
 
+list_of_keys = list(phonebook)
+print(list_of_keys)
 
+random_key = random.choice(list_of_keys)
+print(random_key)
+
+print(phonebook[random_key])
+
+print()
+print(phonebook[random.choice(list(phonebook))])
 
 
 
@@ -174,7 +197,7 @@ print('*****  end section 9 ********')
 print()
 
 
-'''
+
 
 
 
