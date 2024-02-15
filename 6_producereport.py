@@ -207,3 +207,18 @@ ProduceDictionary={
     }
 }
 
+import math
+
+for item in ProduceDictionary:
+    cost = float(ProduceDictionary[item]['cost'])
+    amt_sold = float(ProduceDictionary[item]['amt_sold'])
+    total = float(ProduceDictionary[item]['total'])
+
+    test_total = cost * amt_sold
+
+    if round(test_total, 2) != total:
+        print()
+        print(f"Produce name: {item}")
+        print(f"Calulated total: ${test_total:.2f}")
+        print(f"Stated total: ${total:.2f}")
+        print()
